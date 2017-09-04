@@ -18,11 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
-
+/*
         Button button = (Button) findViewById(R.id.button2);
 
         button.setOnClickListener (
@@ -40,44 +36,28 @@ public class MainActivity extends AppCompatActivity {
                         TextView bb = (TextView) findViewById(R.id.textView);
                         bb.setText( aa.getText());
 
-
-
                     }
 
                 }
         );
 
-
-
-
+*/
 
     }
 
+    public void PB2( View view ){
 
-
-
-
-
-    /*
-    public void PB1( ){
-
-        Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB1 ", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB2 ", Toast.LENGTH_SHORT);
         toast.show();
 
-        /*
+
         EditText aa = (EditText) findViewById(R.id.editText);
         //aa.getText();
 
         TextView bb = (TextView) findViewById(R.id.textView);
         bb.setText( aa.getText());
 
-        /
+
     }
-    */
-
-
-
-
-
 }
 
