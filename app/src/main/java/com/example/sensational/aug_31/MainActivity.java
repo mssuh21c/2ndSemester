@@ -25,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
         Button button = (Button) findViewById(R.id.copyBtn);
+=======
+/*
+        Button button = (Button) findViewById(R.id.button2);
+>>>>>>> bbcb486cf22384e0bbe248e1612c4e77e9f7346e
 
         button.setOnClickListener (
                 new Button.OnClickListener ( ) {
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         );
+<<<<<<< HEAD
 
         Log.i ( TAG, "this is onCreate in Activity 1 ");
 
@@ -65,15 +71,25 @@ public class MainActivity extends AppCompatActivity {
     public void PB1( ){
 
         Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB1 ", Toast.LENGTH_SHORT);
+=======
+*/
+
+    }
+
+    public void PB2( View view ){
+
+        Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB2 ", Toast.LENGTH_SHORT);
+>>>>>>> bbcb486cf22384e0bbe248e1612c4e77e9f7346e
         toast.show();
 
-        /*
+
         EditText aa = (EditText) findViewById(R.id.editText);
         //aa.getText();
 
         TextView bb = (TextView) findViewById(R.id.textView);
         bb.setText( aa.getText());
 
+<<<<<<< HEAD
         /
     }
     */
@@ -130,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+=======
+>>>>>>> bbcb486cf22384e0bbe248e1612c4e77e9f7346e
 
+    }
 }
 
