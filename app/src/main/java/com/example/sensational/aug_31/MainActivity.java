@@ -25,18 +25,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
+
         Button button = (Button) findViewById(R.id.copyBtn);
-=======
-/*
-        Button button = (Button) findViewById(R.id.button2);
->>>>>>> bbcb486cf22384e0bbe248e1612c4e77e9f7346e
+
+
+
+        //Button button = (Button) findViewById(R.id.button2);
 
         button.setOnClickListener (
                 new Button.OnClickListener ( ) {
 
                     public void onClick ( View v) {
-                    //public void onClick ( View v ) {
 
                         Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB1 ", Toast.LENGTH_SHORT);
                         toast.show();
@@ -51,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         );
-<<<<<<< HEAD
+
+
 
         Log.i ( TAG, "this is onCreate in Activity 1 ");
 
@@ -71,15 +71,17 @@ public class MainActivity extends AppCompatActivity {
     public void PB1( ){
 
         Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB1 ", Toast.LENGTH_SHORT);
-=======
-*/
+
 
     }
+*/
+
+
 
     public void PB2( View view ){
 
         Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB2 ", Toast.LENGTH_SHORT);
->>>>>>> bbcb486cf22384e0bbe248e1612c4e77e9f7346e
+
         toast.show();
 
 
@@ -88,11 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView bb = (TextView) findViewById(R.id.textView);
         bb.setText( aa.getText());
-
-<<<<<<< HEAD
-        /
     }
-    */
+
 
 
     public void nextScene  ( View view) {
@@ -141,14 +140,10 @@ public class MainActivity extends AppCompatActivity {
         Scene scene1 = Scene.getSceneForLayout(rootContainer, R.layout.activity_main, this);
         //Scene scene2 = Scene.getSceneForLayout(rootContainer, R.layout.activity_main2, this);
         scene1.enter();
-
        */
-    }
-
-
-=======
->>>>>>> bbcb486cf22384e0bbe248e1612c4e77e9f7346e
 
     }
+
+
 }
 

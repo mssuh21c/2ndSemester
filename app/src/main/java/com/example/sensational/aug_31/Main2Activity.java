@@ -28,6 +28,9 @@ public class Main2Activity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), "onPause : this will be poped up after pressing back button ", Toast.LENGTH_SHORT);
         toast.show();
 
+        Log.i("Debug", " mark is On Pause in Main2 Activity ");
+
+
 
     }
 
@@ -35,6 +38,7 @@ public class Main2Activity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), "onResume : this will be poped up after pressing back button ", Toast.LENGTH_SHORT);
         toast.show();
 
+        Log.i("Debug", " mark is On Resume in Main2 Activity ");
     }
     public void goTo1 (  View v  ) {
         Intent i = new Intent ( this, MainActivity.class);
