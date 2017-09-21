@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+public class SecondInstanceWithNewScreen extends AppCompatActivity {
 
     public static final String TAG ="State Change";
 
@@ -60,11 +60,6 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
-    public void goTo3 ( View v ) {
-        Intent i = new Intent ( this, Main3Activity.class);
-        startActivity(i);
-
-    }
 
 
 }

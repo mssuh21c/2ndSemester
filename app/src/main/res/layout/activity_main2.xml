@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sensational.aug_31.Main2Activity">
+    tools:context="com.example.sensational.aug_31.SecondInstanceWithNewScreen">
 
     <RelativeLayout
+        android:id="@+id/lay2"
         android:layout_width="368dp"
         android:layout_height="495dp"
         tools:layout_editor_absoluteX="8dp"
@@ -16,12 +17,12 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="43dp"
-            android:layout_marginTop="67dp"
+            android:layout_marginTop="60dp"
             android:onClick="goTo1"
-            android:text="Go to 1 " />
+            android:text="Go to 1 "
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/button4"
+            android:layout_marginEnd="44dp" />
 
         <Button
             android:id="@+id/button4"

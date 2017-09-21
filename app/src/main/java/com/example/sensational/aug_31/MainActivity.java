@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG ="State Change";
 
 
+    ViewGroup rc;
+    Scene s2;
+    Scene s3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("markDebug",  " this is onCreate in Main 1 Activity ");
 
-
         Button button = (Button) findViewById(R.id.copyBtn);
-
-
-
-        //Button button = (Button) findViewById(R.id.button2);
 
         button.setOnClickListener (
                 new Button.OnClickListener ( ) {
@@ -65,41 +64,17 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), "this will be poped up after pressing back button ", Toast.LENGTH_SHORT);
         toast.show();
 
+        Log.i ( TAG, "mark : this is onPause in Activity 1 ,,, when is this called ? ");
 
     }
 
-
-    /*
-    public void PB1( ){
-
-        Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB1 ", Toast.LENGTH_SHORT);
-
-
-    }
-*/
-
-
-
-    public void PB2( View view ){
-
-        Toast toast = Toast.makeText(getApplicationContext(), "this is after clicked in PB2 ", Toast.LENGTH_SHORT);
-
-        toast.show();
-
-
-        EditText aa = (EditText) findViewById(R.id.editText);
-        //aa.getText();
-
-        TextView bb = (TextView) findViewById(R.id.textView);
-        bb.setText( aa.getText());
-    }
 
 
 
     public void nextScene  ( View view) {
 
         /*
-        Intent intent = new Intent ( this , Main2Activity.class);
+        Intent intent = new Intent ( this , SecondInstanceWithNewScreen.class);
         startActivity( intent );
         */
 
@@ -133,16 +108,43 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goTo2 (  View v  ) {
-        Intent i = new Intent ( this, Main2Activity.class);
-        startActivity(i);
+//        Intent i = new Intent ( this, SecondInstanceWithNewScreen.class);
+//        startActivity(i);
 
-/*
-        ViewGroup rootContainer;
-        rootContainer = (ViewGroup) findViewById(R.id.rootLayout);
-        Scene scene1 = Scene.getSceneForLayout(rootContainer, R.layout.activity_main, this);
-        //Scene scene2 = Scene.getSceneForLayout(rootContainer, R.layout.activity_main2, this);
-        scene1.enter();
-       */
+
+        rc = (ViewGroup) findViewById(R.id.rootLayout);
+            // id should be first parent layout of launcher activity  ***********
+
+        s2 = Scene.getSceneForLayout(rc, R.layout.activity_main2, this);
+
+        s2.enter();
+
+
+    }
+
+
+    public void goTo3 ( View v ) {
+
+        /*
+
+        //Intent i = new Intent ( this, Main3Activity.class);       // this is not instantiated yet
+        //startActivity(i);
+        ViewGroup rc;
+        Scene s3;                               // s3 will be used within this scope
+                                                // s1, s2, s3 should be global , and anyone is able to access.....
+
+        rc = (ViewGroup) findViewById(R.id.rootLayout);
+        s3 = Scene.getSceneForLayout(rc, R.layout.activity_main3, this);  // file name of xml
+        s3.enter();
+
+        */
+
+        Log.i(" mark Debug ",  " this is at the goTo3 afer clicked by button");
+
+        s3 = Scene.getSceneForLayout(rc, R.layout.activity_main3, this);
+
+        s3.enter();
+
 
     }
 
