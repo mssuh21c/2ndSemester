@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.d("markDebug",  " this is onCreate in Main 1 Activity ");
+
 
         Button button = (Button) findViewById(R.id.copyBtn);
 

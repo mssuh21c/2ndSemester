@@ -15,7 +15,9 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        Log.i ( TAG, "this is onCreate in Activity 3 ");
+        //Log.i ( TAG, "this is onCreate in Activity 3 ");
+
+        Log.d("markDebug",  " this is onCreate in Main 3 Activity ");
     }
 
 

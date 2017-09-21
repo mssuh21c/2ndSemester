@@ -20,7 +20,8 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
 
-        Log.i ( TAG, "this is onCreate in Activity 2 ");
+        //Log.i ( TAG, "this is onCreate in Activity 2 ");
+        Log.d("markDebug" , " this is onCreate in Main 2 Activity ");
     }
 
     protected void onPause ( Bundle savedInstanceState ) {
@@ -41,6 +42,8 @@ public class Main2Activity extends AppCompatActivity {
         Log.i("Debug", " mark is On Resume in Main2 Activity ");
     }
     public void goTo1 (  View v  ) {
+
+
         Intent i = new Intent ( this, MainActivity.class);
         startActivity(i);
 
