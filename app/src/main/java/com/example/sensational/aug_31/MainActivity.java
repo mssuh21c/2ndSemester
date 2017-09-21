@@ -139,8 +139,9 @@ public class MainActivity extends AppCompatActivity {
 
         */
 
-        Log.i(" mark Debug ",  " this is at the goTo3 afer clicked by button");
+        Log.i(" mark Debug ",  " this is at the goTo3 after clicked by button");
 
+        rc = (ViewGroup) findViewById(R.id.rootLayout);
         s3 = Scene.getSceneForLayout(rc, R.layout.activity_main3, this);
 
         s3.enter();
