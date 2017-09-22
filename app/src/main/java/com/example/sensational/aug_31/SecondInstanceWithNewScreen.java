@@ -17,7 +17,7 @@ public class SecondInstanceWithNewScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.screen5);
 
 
         //Log.i ( TAG, "this is onCreate in Activity 2 ");
@@ -40,24 +40,6 @@ public class SecondInstanceWithNewScreen extends AppCompatActivity {
         toast.show();
 
         Log.i("Debug", " mark is On Resume in Main2 Activity ");
-    }
-    public void goTo1 (  View v  ) {
-
-
-        Intent i = new Intent ( this, MainActivity.class);
-        startActivity(i);
-
-/*
-        ViewGroup rootContainer;
-        rootContainer = (ViewGroup) findViewById(R.id.rootLayout);
-        Scene scene1 = Scene.getSceneForLayout(rootContainer, R.layout.activity_main, this);
-        //Scene scene2 = Scene.getSceneForLayout(rootContainer, R.layout.activity_main2, this);
-        scene1.enter();
-*/
-
-    }
-    public void goTo2 ( View v ) {
-
     }
 
 
