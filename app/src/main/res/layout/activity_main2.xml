@@ -28,22 +28,22 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button3"
             android:layout_marginEnd="14dp"
             android:layout_marginTop="82dp"
-            android:layout_toStartOf="@+id/button5"
             android:onClick="goTo2"
-            android:text="Go to 2 " />
+            android:text="Go to 2 "
+            android:layout_below="@+id/button3"
+            android:layout_toStartOf="@+id/button5" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/button4"
-            android:layout_marginEnd="89dp"
-            android:layout_marginTop="73dp"
             android:onClick="goTo3"
-            android:text="Go to 3" />
+            android:text="Go to 3"
+            android:layout_marginTop="89dp"
+            android:layout_marginEnd="93dp"
+            android:layout_below="@+id/button4"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

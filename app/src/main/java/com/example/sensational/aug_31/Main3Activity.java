@@ -20,20 +20,4 @@ public class Main3Activity extends AppCompatActivity {
         Log.d("markDebug",  " this is onCreate in Main 3 Activity ");
     }
 
-
-    public void goTo1 (  View v  ) {
-        Intent i = new Intent ( this, MainActivity.class);
-        startActivity(i);
-    }
-
-    public void goTo2 ( View v ) {
-
-    }
-
-    public void goTo3 ( View v ) {
-        Intent i = new Intent ( this, Main3Activity.class);
-        startActivity(i);
-
-    }
-
 }
