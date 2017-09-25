@@ -1,4 +1,4 @@
-package com.example.sensational.aug_31;
+package com.example.sensational.HYWU;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

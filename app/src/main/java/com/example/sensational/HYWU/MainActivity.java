@@ -1,4 +1,4 @@
-package com.example.sensational.aug_31;
+package com.example.sensational.HYWU;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,6 @@ import android.transition.Scene;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -84,15 +83,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected void onPause ( Bundle savedInstanceState ) {
-
+    protected void onPause ( ) {
+        super.onPause();
         Toast toast = Toast.makeText(getApplicationContext(), "this will be poped up after pressing back button ", Toast.LENGTH_SHORT);
         toast.show();
         Log.i ( TAG, "mark : this is onPause in Activity 1 ,,, when is this called ? ");
     }
 
-    protected void onStop ( Bundle savedInstanceState ) {
-
+    protected void onStop (  ) {
+        super.onStop();
         Toast toast = Toast.makeText(getApplicationContext(), "this will be poped up after startActvity  ", Toast.LENGTH_SHORT);
         toast.show();
 
@@ -100,6 +99,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    protected void onResume (  ) {
+        super.onResume();
+        Toast toast = Toast.makeText(getApplicationContext(), "this will be poped up after back button. my guess. !!! ", Toast.LENGTH_SHORT);
+        toast.show();
+
+        Log.i ( TAG, "mark : this is onResume in Activity 1 after Activity 2 by pressing back button.  ");
+
+    }
 
 
     //public void goTo1 (  View v  ) {
@@ -130,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goTo3 ( View v ) {
-<<<<<<< HEAD
+
 
         /*
 
@@ -148,10 +155,6 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(" mark Debug ",  " this is at the goTo3 after clicked by button");
 
-        rc = (ViewGroup) findViewById(R.id.rootLayout);
-        s3 = Scene.getSceneForLayout(rc, R.layout.activity_main3, this);
-=======
-        Log.i(" mark Debug ",  " this is at the goTo3 afer clicked by button");
         scr3.enter();
     }
     public void goTo4 ( View v ) {
@@ -165,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void newActivity ( View v ) {
->>>>>>> ff3fb3f6fed193b830a71dc494b09b818e8f5b96
+
 
         Intent i = new Intent ( this , SecondInstanceWithNewScreen.class);
         startActivity( i );

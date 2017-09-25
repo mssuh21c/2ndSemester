@@ -1,12 +1,8 @@
-package com.example.sensational.aug_31;
+package com.example.sensational.HYWU;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Scene;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 public class SecondInstanceWithNewScreen extends AppCompatActivity {
