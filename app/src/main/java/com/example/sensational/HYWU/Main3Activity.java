@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class Main3Activity extends AppCompatActivity {
+public class Main3Activity extends AppCompatActivity implements TextSizeSetting.ToolbarListener{
 
     public static final String TAG ="State Change";
 
@@ -18,4 +18,8 @@ public class Main3Activity extends AppCompatActivity {
         Log.d("markDebug",  " this is onCreate in Main 3 Activity ");
     }
 
+    @Override
+    public void onButtonClick(int position, String message) {
+        Log.d ( "markDebug", " this is on ButtonClick in Screen 3 ");
+    }
 }

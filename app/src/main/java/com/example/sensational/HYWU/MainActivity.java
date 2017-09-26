@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        /*    ****     */
         setContentView(R.layout.activity_main);
 
         Log.d("markDebug",  " this is onCreate in Main 1 Activity ");
@@ -53,12 +52,6 @@ public class MainActivity extends AppCompatActivity {
         scr3 = Scene.getSceneForLayout(rc, R.layout.activity_main3, this);
         scr4 = Scene.getSceneForLayout(rc, R.layout.activitymainscr4, this);
         scr5 = Scene.getSceneForLayout(rc, R.layout.screen5, this);
-
-
-
-
-
-
 
 
 /*      listener implementation
@@ -137,24 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goTo3 ( View v ) {
-
-
-        /*
-
-        //Intent i = new Intent ( this, Main3Activity.class);       // this is not instantiated yet
-        //startActivity(i);
-        ViewGroup rc;
-        Scene s3;                               // s3 will be used within this scope
-                                                // s1, s2, s3 should be global , and anyone is able to access.....
-
-        rc = (ViewGroup) findViewById(R.id.rootLayout);
-        s3 = Scene.getSceneForLayout(rc, R.layout.activity_main3, this);  // file name of xml
-        s3.enter();
-
-        */
-
         Log.i(" mark Debug ",  " this is at the goTo3 after clicked by button");
-
         scr3.enter();
     }
     public void goTo4 ( View v ) {

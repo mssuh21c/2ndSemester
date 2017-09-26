@@ -1,5 +1,6 @@
 package com.example.sensational.HYWU;
 
+import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,12 +13,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 /**
  * Created by mssuh on 2017-09-24.
  */
 
-public class TextSizeSetting extends Fragment implements SeekBar.OnSeekBarChangeListener {
+public class TextSizeSetting extends Fragment  {
+
+
+    ToolbarListener activityCallback;
+    //Toolbar.OnClickListener activityCallback;
+
+    public interface ToolbarListener {
+            public void onButtonClick ( int position    , String message  );
+
+    }
 
     private static int seekValue =0 ;
 
@@ -26,38 +37,18 @@ public class TextSizeSetting extends Fragment implements SeekBar.OnSeekBarChange
 
         View view = inflater.inflate(R.layout.fragment1, viewGroup, false);
 
-/*
-        final SeekBar seekBar = ( SeekBar) view.findViewById(R.id.seekBar) ;
-        seekBar.setOnSeekBarChangeListener( this );
-
-        final Button button = (Button) view.findViewById(R.id.button29);
-        button.setOnClickListener();
-*/
-
-
         return view;
 
     }
 
-
     @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-        seekValue = progress;
-
-        Log.i("Mark Debug", " Mark is onProgressChanged");
-
-        //Toast.makeText ( getApplicationContext() , "on ProgressChanged", Toast.LENGTH_LONG).show();
-
+    public void onAttach (Activity activity){
+        super.onAttach( activity);
+        activityCallback = (ToolbarListener) activity;
     }
 
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-
+    public void buttonClicked ( View view) {
+        activityCallback.onButtonClick( 2, "what is this");
     }
 
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-
-    }
 }
